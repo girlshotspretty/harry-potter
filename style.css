@@ -1,0 +1,150 @@
+/* Reset basico e variaveis tematicas */
+:root {
+    --primary-color: #3C1053; /* Roxo bordô profundo */
+    --accent-color: #740001;  /* Vinho Grifinória */
+    --gold-color: #D3A625;    /* Dourado mágico */
+    --hover-color: #EEBA30;   /* Dourado brilhante */
+    --bg-color: #F8F6F0;      /* Tom de pergaminho suave */
+    --card-bg: #FFFFFF;
+    --text-color: #222222;
+    --border-color: #E2D8C3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 4px solid var(--gold-color);
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #E2D8C3;
+    font-style: italic;
+}
+
+/* Nav com Flexbox */
+nav {
+    background-color: var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: block;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--gold-color);
+    color: var(--primary-color);
+}
+
+/* Main Layout com CSS Grid */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Estilizacao dos Cards e Textos */
+article, aside {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--gold-color);
+    padding-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+    border: 2px solid var(--border-color);
+}
+
+blockquote {
+    background-color: #FFFDF5;
+    border-left: 5px solid var(--gold-color);
+    padding: 1.2rem;
+    font-style: italic;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    margin-top: 2rem;
+    border-top: 4px solid var(--gold-color);
+}
+
+/* Layout Responsivo para Telas Maiores (Desktop) */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+    }
+}
